@@ -47,8 +47,12 @@ class Server:
         return: dictionary containing hypermedia metadata
         """
 
-        assert index is None or (isinstance(index, int) and index >= 0), "Index must be a non-negative integer."
-        assert isinstance(page_size, int) and page_size > 0, "Page_size must be a positive integer."
+        assert index is None or (
+            (isinstance(index, int) and index >= 0)
+        ), "Index must be a non-negative integer."
+        assert (
+            isinstance(page_size, int) and page_size > 0
+        ), "Page_size must be a positive integer."
 
         indexed_dataset = self.indexed_dataset()
         total_items = len(indexed_dataset)
