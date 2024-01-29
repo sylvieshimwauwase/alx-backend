@@ -49,10 +49,8 @@ class Server:
         return: list representing page of the dataset
         """
 
-        assert isinstance(page, int) and page > 0,
-        "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0,
-        "page_size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "page must be a positive integer"
+        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
 
         s_index, e_index = index_range(page, page_size)
         dataset = self.dataset()
@@ -71,10 +69,8 @@ class Server:
         page_size: number of items per page
         return: ldictionary containing hypermedia metadata
         """
-        assert isinstance(page, int) and page > 0,
-        "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0,
-        "Page_size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
+        assert isinstance(page_size, int) and page_size > 0, "Page_size must be a positive integer"
 
         current_page_data = self.get_page(page, page_size)
         total_items = len(self.dataset())
