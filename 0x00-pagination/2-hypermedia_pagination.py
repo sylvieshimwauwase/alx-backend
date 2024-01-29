@@ -71,10 +71,10 @@ class Server:
         """
         assert (
             isinstance(page, int) and page > 0
-            ), "Page must be a positive integer"
+        ), "Page must be a positive integer"
         assert (
             isinstance(page_size, int) and page_size > 0
-            ), "Page_size must be a positive integer"
+        ), "Page_size must be a positive integer"
 
         current_page_data = self.get_page(page, page_size)
         total_items = len(self.dataset())
