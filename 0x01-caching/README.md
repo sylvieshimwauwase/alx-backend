@@ -1,0 +1,1 @@
+this folder is holding the project about Caching which is a mechanism used to store and retrieve frequently accessed data quickly 
